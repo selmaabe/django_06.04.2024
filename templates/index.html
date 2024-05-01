@@ -10,7 +10,10 @@
   
   <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
   
-  <title>Virtual Folio - Portfolio HTML5 Template</title>
+  <title>{{ site_title }}</title>
+  <meta name="keywords" content="{{ site_keywords }}">
+  <meta name="description" content="{{ site_description }}">  
+  <meta name="author" content="Selma BENER">  
 
   <link rel="shortcut icon" href="{% get_media_prefix %}favicon.ico" type="image/x-icon">
   
@@ -38,7 +41,7 @@
   <div class="btn-back_to_top">
     <span class="ti-arrow-up"></span>
   </div>
-  
+
   
   <div class="vg-page page-home" id="home" style="background-image: url(media/img/bg_image_1.jpg)">
     <!-- Navbar -->
@@ -71,8 +74,8 @@
     <!-- Caption header -->
     <div class="caption-header text-center wow zoomInDown">
       <h5 class="fw-normal">Welcome</h5>
-      <h1 class="fw-light mb-4">I'm <b class="fg-theme">Stephen</b> Doe</h1>
-      <div class="badge">UI/UX & Web Designer</div>
+      <h1 class="fw-light mb-4">I'm <b class="fg-theme">Selma</b> Bener</h1>
+      <div class="badge">{{ home_banner_title}}</div>
     </div> <!-- End Caption header -->
     <div class="floating-button"><span class="ti-mouse"></span></div>
   </div>
@@ -86,14 +89,14 @@
           </div>
         </div>
         <div class="col-lg-6 offset-lg-1 wow fadeInRight">
-          <h1 class="fw-light">Stephen Doe</h1>
-          <h5 class="fg-theme mb-3">UI/UX & Web Designer</h5>
-          <p class="text-muted">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form but the majority have suffered alteration in some</p>
+          <h1 class="fw-light">{{ home_banner_name}}</h1>
+          <h5 class="fg-theme mb-3">{{ home_banner_title}}</h5>
+          <p class="text-muted">{{ home_banner_description}}</p>
           <ul class="theme-list">
-            <li><b>From:</b> Texas, US</li>
-            <li><b>Lives In:</b> Texas, US</li>
-            <li><b>Age:</b> 25</li>
-            <li><b>Gender:</b> Male</li>
+            <li><b>From:</b> İstanbul, Turkey</li>
+            <li><b>Lives In:</b> İstanbul, Turkey</li>
+            <li><b>Age:</b> 23</li>
+            <li><b>Gender:</b> Female</li>
           </ul>
           <button class="btn btn-theme-outline">Download CV</button>
         </div>
@@ -219,7 +222,7 @@
       </div>
     </div>
   </div>
-  
+
   
   <div class="vg-page page-funfact" style="background-image: url(media/img/bg_banner.jpg);">
     <div class="container">
@@ -362,13 +365,8 @@
         <div class="badge badge-subhead">Contact</div>
       </div>
       <h1 class="text-center fw-normal wow fadeInUp">Get in touch</h1>
-      <div class="row py-5">
-        <div class="col-lg-7 px-0 pr-lg-3 wow zoomIn">
-          <div class="vg-maps">
-            <div id="google-maps" style="width: 100%; height: 100%;"></div>
-          </div>
-        </div>
-        <div class="col-lg-5">
+
+        <div class="col-lg-12">
           <form class="vg-contact-form">
             <div class="form-row">
               <div class="col-12 mt-3 wow fadeInUp">
@@ -390,8 +388,8 @@
       </div>
     </div>
   </div> <!-- End Contact -->
-  
-  
+
+
   
   <!-- Footer -->
   <div class="vg-footer">
@@ -422,9 +420,9 @@
             <p>Contact me</p>
             <hr class="divider">
             <ul class="list-unstyled">
-              <li>info@virtual.com</li>
-              <li>+8890234</li>
-              <li>+813023</li>
+              <li>selmaabener@gmail.com</li>
+              <li>+90 (507) 159 99 73</li>
+              
             </ul>
           </div>
         </div>
@@ -473,7 +471,7 @@
     
   <script src="{% static 'js/topbar-virtual.js' %}"></script>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+
   
 </body>
 </html>
