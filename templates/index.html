@@ -15,7 +15,7 @@
   <meta name="description" content="{{ site_description }}">  
   <meta name="author" content="Selma BENER">  
 
-  <link rel="shortcut icon" href="{% get_media_prefix %}favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ site_favicon.url }}" type="image/x-icon">
   
   <link rel="stylesheet" type="text/css" href="{% static 'css/themify-icons.css' %}">
   
@@ -47,7 +47,7 @@
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
       <div class="container">
-        <a href="" class="navbar-brand">V-Folio</a>
+        <a href="" class="navbar-brand">Selma Bener</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
           <span class="ti-menu"></span>
         </button>
@@ -85,7 +85,7 @@
       <div class="row">
         <div class="col-lg-4 py-3">
           <div class="img-place wow fadeInUp">
-            <img src="{% get_media_prefix %}img/person.jpg" alt="">
+            <img src="{{home_banner_image.url}}" alt="">
           </div>
         </div>
         <div class="col-lg-6 offset-lg-1 wow fadeInRight">
@@ -258,7 +258,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="img-place">
-                    <img src="{% get_media_prefix %}img/testimonials/testimonials_1.jpg" alt="">
+                    <img src="{{ testimonial_1_image.url }}" alt="">
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -266,7 +266,7 @@
                     <div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered</div>
                     <div class="testi-info">
                       <div class="thumb-profile">
-                        <img src="{% get_media_prefix %}img/testimonials/testimonials_1.jpg" alt="">
+                        <img src="{{ testimonial_1_image.url }}" alt="">
                       </div>
                       <div class="tagline">
                         <h5 class="mb-0">Satria Nugraha</h5>
@@ -281,7 +281,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="img-place">
-                    <img src="{% get_media_prefix %}img/testimonials/testimonials_2.jpg" alt="">
+                    <img src="{{ testimonial_2_image.url }}" alt="">
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -289,7 +289,7 @@
                     <div class="testi-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe natus expedita ab facilis ut, animi explicabo amet. Voluptatibus possimus iste enim, doloremque, fugiat accusamus nisi optio fugit ratione expedita harum?</div>
                     <div class="testi-info">
                       <div class="thumb-profile">
-                        <img src="{% get_media_prefix %}img/testimonials/testimonials_2.jpg" alt="">
+                        <img src="{{ testimonial_2_image.url }}" alt="">
                       </div>
                       <div class="tagline">
                         <h5 class="mb-0">Selena Arrini</h5>

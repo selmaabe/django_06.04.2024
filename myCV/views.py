@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from myCV.models import GeneralSetting
+from myCV.models import GeneralSetting, ImageSetting
+
 
 # Create your views here.
 
@@ -11,6 +12,11 @@ def index(request):
     home_banner_name = GeneralSetting.objects.get(name="home_banner_name").parameter
     home_banner_description = GeneralSetting.objects.get(name="home_banner_description").parameter
 
+    # Images
+    site_favicon = ImageSetting.objects.get(name='site_favicon').file
+    home_banner_image = ImageSetting.objects.get(name='home_banner_image').file
+    testimonial_1_image = ImageSetting.objects.get(name='testimonial_1_image').file
+    testimonial_2_image = ImageSetting.objects.get(name='testimonial_2_image').file
 
     context = {'site_title': site_title,
                'site_keywords': site_keywords,
@@ -18,7 +24,11 @@ def index(request):
                "home_banner_title": home_banner_title,
                "home_banner_name": home_banner_name,
                "home_banner_description": home_banner_description,
-    }
+               "site_favicon": site_favicon,
+               "home_banner_image": home_banner_image,
+               "testimonial_1_image": testimonial_1_image,
+               "testimonial_2_image": testimonial_2_image
 
-    return render(request, 'index.html',context=context)
+               }
 
+    return render(request, 'index.html', context=context)
