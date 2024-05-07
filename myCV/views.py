@@ -18,6 +18,7 @@ def index(request):
     testimonial_1_image = ImageSetting.objects.get(name='testimonial_1_image').file
     testimonial_2_image = ImageSetting.objects.get(name='testimonial_2_image').file
 
+
     context = {'site_title': site_title,
                'site_keywords': site_keywords,
                'site_description': site_description,
