@@ -11,6 +11,12 @@ def index(request):
     home_banner_title = GeneralSetting.objects.get(name="home_banner_title").parameter
     home_banner_name = GeneralSetting.objects.get(name="home_banner_name").parameter
     home_banner_description = GeneralSetting.objects.get(name="home_banner_description").parameter
+    testimonial_1 = GeneralSetting.objects.get(name='testimonial_1').parameter
+    testimonial_2 = GeneralSetting.objects.get(name='testimonial_2').parameter
+    clients = GeneralSetting.objects.get(name='clients').parameter
+    client_satisfaction = GeneralSetting.objects.get(name='client_satisfaction').parameter
+    project_ongoing = GeneralSetting.objects.get(name='project_ongoing').parameter
+    project_compleate = GeneralSetting.objects.get(name='project_compleate').parameter
 
     # Images
     site_favicon = ImageSetting.objects.get(name='site_favicon').file
@@ -28,7 +34,13 @@ def index(request):
                "site_favicon": site_favicon,
                "home_banner_image": home_banner_image,
                "testimonial_1_image": testimonial_1_image,
-               "testimonial_2_image": testimonial_2_image
+               "testimonial_2_image": testimonial_2_image,
+               "testimonial_1": testimonial_1,
+               "testimonial_2": testimonial_2,
+               "project_ongoing": project_ongoing,
+               "client_satisfaction": client_satisfaction,
+               "clients": clients,
+               "project_compleate": project_compleate
 
                }
 
