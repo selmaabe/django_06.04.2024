@@ -1,9 +1,10 @@
 from django.contrib import admin
 from myCV.models import *
-from django.contrib import admin
 from .models import Skill
 
-admin.site.register(Skill)
+
+
+
 # Register your models here.
 
 @admin.register(GeneralSetting)
@@ -22,10 +23,14 @@ class ImageSettingAdmin(admin.ModelAdmin):
     class Meta:
         model = ImageSetting
 
+@admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
     list_display = ['id', 'order', 'name', 'percentage', 'updated_date', 'created_date']
     search_fields = ['name']
     list_editable = ['order','name', 'percentage']
 
+
+
     class Meta:
         model = Skill
+
