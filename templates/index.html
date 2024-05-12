@@ -98,17 +98,15 @@
             <li><b>Age:</b> 23</li>
             <li><b>Gender:</b> Female</li>
           </ul>
-          <button class="btn btn-theme-outline">Download CV</button>
         </div>
       </div>
     </div>
      <div class="container py-5">
     <h1 class="text-center fw-normal wow fadeIn">My Skills</h1>
     <div class="row py-3">
+{% for skill in skills %}
         <div class="col-md-6">
             <div class="px-lg-3">
-                {% for skill in skills %}
-                {% if forloop.counter <= 4 %}
                 <div class="progress-wrapper wow fadeInUp">
                     <span class="caption">{{skill.name}}</span>
                     <div class="progress">
@@ -117,24 +115,9 @@
                         </div>
                     </div>
                 </div>
-                {% endif %}
-                {% endfor %}
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="px-lg-3">
-                {% for skill in skills %}
-                {% if forloop.counter > 4 %}
-                <div class="progress-wrapper wow fadeInUp">
-                    <span class="caption">{{skill.name}}</span>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: {{skill.percentage}}%;" aria-valuenow="{{skill.percentage}}" aria-valuemin="0" aria-valuemax="100">
-                            {{skill.percentage}}%
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
-                {% endfor %}
+{% endfor %}
             </div>
         </div>
     </div>
