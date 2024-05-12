@@ -16,6 +16,8 @@
   <meta name="author" content="Selma BENER">  
 
   <link rel="shortcut icon" href="{{ site_favicon.url }}" type="image/x-icon">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   
   <link rel="stylesheet" type="text/css" href="{% static 'css/themify-icons.css' %}">
   
@@ -60,8 +62,11 @@
               <a href="#about" class="nav-link" data-animate="scrolling">About</a>
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
+              <a href="#testimonial" class="nav-link" data-animate="scrolling">Testimonial</a>
             </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
+            </li>              
           </ul>
           <ul class="nav ml-auto">
             <li class="nav-item">
@@ -203,7 +208,7 @@
   </div>
   
   <!-- Testimonial -->
-  <div class="vg-page page-testimonial">
+  <div class="vg-page page-testimonial" id="testimonial">
     <div class="container">
       <h1 class="text-center fw-normal wow fadeInUp">What Clients are Saying</h1>
       <div class="row justify-content-center mt-5 wow fadeInUp">
@@ -313,11 +318,13 @@
           <div class="float-lg-right">
             <p>Follow me</p>
             <hr class="divider">
-            <ul class="list-unstyled">
-              <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-              <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-              <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-              <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+            <ul class="list-unstyled" style="text-align: center">
+                {% for social in social_medias %}
+                    <li><a href="{{ social.link }}" target="_blank">{{ social.icon|safe }}</a></li>
+
+                {% endfor %}
+                
+              
             </ul>
           </div>
         </div>

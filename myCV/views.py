@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myCV.models import GeneralSetting, ImageSetting,Skill,Experience,Education
+from myCV.models import GeneralSetting, ImageSetting,Skill,Experience,Education,SocialMedia
 
 
 # Create your views here.
@@ -29,6 +29,7 @@ def index(request):
 
     experiences = Experience.objects.all().order_by('-start_date')
     educations = Education.objects.all().order_by('-start_date')
+    social_medias = SocialMedia.objects.all()
 
     context = {'site_title': site_title,
                'site_keywords': site_keywords,
@@ -49,6 +50,7 @@ def index(request):
                "skills":skills,
                "experiences":experiences,
                "educations":educations,
+               "social_medias":social_medias,
 
                }
 
