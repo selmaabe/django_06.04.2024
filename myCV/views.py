@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myCV.models import GeneralSetting, ImageSetting,Skill
+from myCV.models import GeneralSetting, ImageSetting,Skill,Experience
 
 
 # Create your views here.
@@ -25,7 +25,9 @@ def index(request):
     testimonial_2_image = ImageSetting.objects.get(name='testimonial_2_image').file
 
     #Skills
-    skills = Skill.objects.all().order_by('order')
+    skills = Skill.objects.all()
+
+    experiences = Experience.objects.all().order_by('-start_date')
 
 
     context = {'site_title': site_title,
@@ -45,6 +47,7 @@ def index(request):
                "clients": clients,
                "project_compleate": project_compleate,
                "skills":skills,
+               "experiences":experiences,
 
                }
 
